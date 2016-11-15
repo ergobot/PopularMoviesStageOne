@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/constraintlayout"
+    tools:context="com.demo.popularmoviesstageone.MovieListActivity">
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backdrop"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/backdrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/startrekposter"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:id="@+id/poster"
+            android:baselineAlignBottom="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintVertical_bias="0.39"
+            app:layout_constraintLeft_toLeftOf="@+id/backdrop" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Star Trek Beyond"
+            android:id="@+id/title"
+            app:layout_constraintLeft_toRightOf="@+id/poster"
+            app:layout_constraintTop_toBottomOf="@+id/backdrop"
+            />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="July 2016"
+        android:paddingLeft="4dp"
+        android:id="@+id/releasedate"
+        app:layout_constraintStart_toEndOf="@id/poster"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:layout_editor_absoluteX="150dp" />
+
+        <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Sci-Fi"
+                android:id="@+id/type"
+            android:paddingLeft="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/releasedate"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="@+id/releasedate"/>
+
+    <View
+        android:id="@+id/hdividertop"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#FF00FF00"
+        app:layout_constraintTop_toBottomOf="@+id/poster"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ratingcontainer"
+        app:layout_constraintTop_toBottomOf="@+id/hdividertop"
+        app:layout_constraintBottom_toTopOf="@+id/hdividerbottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        tools:layout_editor_absoluteX="352dp">
+
+        <EditText
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating"
+            android:text="4.4"
+            android:textAlignment="center"
+            />
+        <ImageView
+            android:id="@+id/ratingicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_star_black_24dp"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/hdividerbottom"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#FF00FF00"
+        app:layout_constraintTop_toBottomOf="@+id/ratingcontainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hdividerbottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="187dp">
+
+        <com.demo.popularmoviesstageone.ExpandableTextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="This is the summary of the whole thing.  Its a long summary and will.. blah blah ewoks...."
+            />
+
+    </LinearLayout>
+
+    
+    <!--<TextView-->
+        <!--android:layout_width="368dp"-->
+        <!--android:layout_height="136dp"-->
+        <!--android:id="@+id/overview"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/hdividerbottom"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--android:text="This is the summary of the whole thing.  Its a long summary and will.. blah blah ewoks...."-->
+
+        tools:layout_editor_absoluteX="8dp" />
+
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/movie_detail"-->
+    <!--style="?android:attr/textAppearanceLarge"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="16dp"-->
+    <!--android:textIsSelectable="true"-->
+    <!--tools:context="com.demo.popularmoviesstageone.MovieDetailFragment" />-->

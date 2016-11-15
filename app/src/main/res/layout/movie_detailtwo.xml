@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:id="@+id/detaillayout"
+    tools:context="com.demo.popularmoviesstageone.MovieListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backdrop"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/backdrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+
+        >
+        
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/detailscontainer">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/startrekposter"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:id="@+id/poster"
+                android:baselineAlignBottom="false"
+                android:layout_weight="2"
+            />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                    android:textSize="40sp"
+                android:text="Star Trek Beyond"
+                android:id="@+id/title"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                />
+
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="July 2016"
+                    android:textSize="20sp"
+                android:paddingLeft="4dp"
+                    android:layout_marginLeft="16dp"
+                android:id="@+id/releasedate"
+                    android:layout_below="@+id/title"
+
+                    />
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Sci-Fi"
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/type"
+                android:paddingLeft="8dp"
+                    android:layout_below="@id/releasedate" />
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/type"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:id="@+id/ratingcontainer"
+                    >
+                    <View
+                        android:id="@+id/hdividertop"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#FF00FF00"
+                        android:layout_margin="16dp"
+                        />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/nestedratingcontainer"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_margin="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating"
+                        android:text="4.4"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        />
+                    <ImageView
+                        android:id="@+id/ratingicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_star_black_24dp"
+                        android:layout_gravity="center"
+                        />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/hdividerbottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="16dp"
+                        android:background="#FF00FF00"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/overviewcontainer"
+            android:layout_below="@+id/detailscontainer">
+
+            <com.demo.popularmoviesstageone.ExpandableTextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="This is the summary of the whole thing.  Its a long summary and will.. blah blah ewoks.... This is the summary of the whole thing.  Its a long summary and will.. blah blah ewoks.... This is the summary of the whole thing.  Its a long summary and will.. blah blah ewoks...."
+            />
+
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+
+</ScrollView>
+
+
+
+
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/movie_detail"-->
+    <!--style="?android:attr/textAppearanceLarge"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="16dp"-->
+    <!--android:textIsSelectable="true"-->
+    <!--tools:context="com.demo.popularmoviesstageone.MovieDetailFragment" />-->
